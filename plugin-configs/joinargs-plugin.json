@@ -1,5 +1,5 @@
 {
-    "name": "SayHelloPlugin",
+    "name": "JoinArgsPlugin",
     "integrationPoints": [
         {
             "interface": "CLICommand",
@@ -12,7 +12,7 @@
             "interface": "CustomEndpoint",
             "grpcConnection": {
                 "addr": "localhost",
-                "port": 9001
+                "port": 9005
             }
         }
     ]

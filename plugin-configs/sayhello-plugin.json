@@ -1,0 +1,12 @@
+{
+    "name": "SayHelloPlugin",
+    "integrationPoints": [
+        {
+            "interface": "CLICommand",
+            "grpcConnection": {
+                "addr": "localhost",
+                "port": 9001
+            }
+        }
+    ]
+}

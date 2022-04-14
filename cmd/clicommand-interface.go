@@ -30,11 +30,11 @@ type CLICommandImpl struct {
 type CLIBuilder struct{}
 
 func (clib CLIBuilder) Build(addr, port string) plugins.Plugin {
-	conn, err := grpc.Dial(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
+	address := fmt.Sprintf("%s:%s", addr, port)
+	conn, err := grpc.Dial(address, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	if err != nil {
 		fmt.Println("Can't connect")
 	}
-	defer conn.Close()
 
 	c := cli.NewCLICommandClient(conn)
 
